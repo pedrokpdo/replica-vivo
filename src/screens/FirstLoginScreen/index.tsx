@@ -1,10 +1,14 @@
 import React from 'react'
-import { View, Text} from 'react-native'
+import { View, Text } from 'react-native'
+import { Space } from '../../components/funcionais/SpaceComponent'
+import { TopTabComponent } from '../../components/TopTabComponent'
 
 export const FirstLoginScreen = () => {
     return (
         <View>
-            <Text>First Login Page</Text>
+            <Space>
+                <TopTabComponent />
+            </Space>
         </View>
     )
 }
