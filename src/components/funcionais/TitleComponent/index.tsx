@@ -1,8 +1,14 @@
 import React from "react";
 import { Text } from "react-native";
 
-export const Title = ({children}) => {
+interface Props {
+    bold?: boolean;
+    children?: any;
+    style?: any;
+}
+
+export const Title = ({ bold, children, style = {} }: Props) => {
     return (
-        <Text>{children}</Text>
+        <Text style={{ fontWeight: bold ? bold : '400', fontSize: 18, ...style }}>{children}</Text>
     )
 }
