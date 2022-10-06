@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { View } from 'react-native'
 import { Button } from '../../components/Button'
@@ -6,6 +7,7 @@ import { Space } from '../../components/funcionais/SpaceComponent'
 import { Title } from '../../components/funcionais/TitleComponent'
 
 export const ConfirmCodeScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Space>
@@ -31,7 +33,7 @@ export const ConfirmCodeScreen = () => {
 
                     </View>
                 </Row>
-                <Button text={'Prosseguir'} onPress={() => { }} top={4} />
+                <Button text={'Prosseguir'} onPress={() => { navigation.navigate('BottomStack') }} top={4} />
             </Space>
         </View>
     )
