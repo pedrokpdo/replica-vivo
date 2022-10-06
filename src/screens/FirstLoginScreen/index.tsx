@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ContainerComponent } from '../../components/funcionais/ContainerComponent'
 import { Space } from '../../components/funcionais/SpaceComponent'
 import { Text } from '../../components/funcionais/TextComponent'
@@ -7,9 +7,10 @@ import { InputComponent } from '../../components/InputComponent'
 import { TopTabComponent } from '../../components/TopTabComponent'
 
 export const FirstLoginScreen = () => {
+    const [press, setPress] = useState('number')
     return (
         <ContainerComponent>
-            <TopTabComponent />
+            <TopTabComponent press={setPresss}/>
             <Space top={2}>
                 <Title>Identifique-se com seu numero</Title>
                 <InputComponent/>
