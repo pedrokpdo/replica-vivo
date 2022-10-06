@@ -1,8 +1,12 @@
 import React from "react";
 import { TextInput } from "react-native";
 
-export const InputComponent = () => {
+interface Props {
+    placeholder?: string;
+}
+
+export const InputComponent = ({placeholder}: Props) => {
     return (
-        <TextInput style={{ borderWidth: 0.5, borderColor: 'gray', padding: 8 }} placeholder="(24) 9 9869-2339" placeholderTextColor={'black'}></TextInput>
+        <TextInput style={{ borderBottomWidth: 0.5, borderBottomColor: 'gray', padding: 8 }} placeholder={placeholder} placeholderTextColor={'black'}></TextInput>
         )
 }
