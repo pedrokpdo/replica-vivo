@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "replica-vivo",
+    "slug": "replica-vivo",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
