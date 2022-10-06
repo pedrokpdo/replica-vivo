@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { Button } from '../../components/Button'
 import { ContainerComponent } from '../../components/funcionais/ContainerComponent'
@@ -9,6 +10,7 @@ import { InputComponent } from '../../components/InputComponent'
 import { TopTabComponent } from '../../components/TopTabComponent'
 
 export const FirstLoginScreen = () => {
+    const navigation  = useNavigation<any>()
     const [press, setPress] = useState('number')
     return (
         <ContainerComponent>
@@ -18,7 +20,7 @@ export const FirstLoginScreen = () => {
                     <Title top={2}>Identifique-se com seu numero</Title>
                     <Text bottom={1} top={2}>Coloque seu numero</Text>
                     <InputComponent placeholder='(24) 9 99869-2339' />
-                    <Button top={2} text={'Prosseguir'} onPress={() => { }} />
+                    <Button top={2} text={'Prosseguir'} onPress={() => { navigation.navigate('ConfirmCodeScreen') }} />
                 </Space>
             ) : (
                 <Space top={2}>
