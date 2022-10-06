@@ -11,6 +11,7 @@ export const AppStack = () => {
                 name="FirstLoginScreen"
                 component={FirstLoginScreen}
                 options={{
+                    title: 'Identifique-se',
                     headerTitleStyle: { color: 'white' },
                     headerStyle: { backgroundColor: 'purple' },
                     headerLeft: () => (

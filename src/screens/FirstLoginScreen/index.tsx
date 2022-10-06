@@ -10,10 +10,9 @@ import { TopTabComponent } from '../../components/TopTabComponent'
 
 export const FirstLoginScreen = () => {
     const [press, setPress] = useState('number')
-    console.log(press)
     return (
         <ContainerComponent>
-            <TopTabComponent setPress={setPress} />
+            <TopTabComponent setPress={setPress} press={press} />
             {press === 'number' ? (
                 <Space top={2}>
                     <Title top={2}>Identifique-se com seu numero</Title>
@@ -27,7 +26,7 @@ export const FirstLoginScreen = () => {
                     <Text bottom={1} top={2}>Por CPF:</Text>
                     <InputComponent placeholder='161.513.177-93' />
                     <Button top={2} text={'Prosseguir'} onPress={() => { }} />
-                    <Divider top={1} bottom={1}/>
+                    <Divider top={1} bottom={1} />
                     <Text bottom={1} top={2}>Por E-mail:</Text>
                     <InputComponent placeholder='pedromotoehm@gmail.com' />
                     <Button top={2} text={'Prosseguir'} onPress={() => { }} />
