@@ -1,6 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import { Button } from '../../components/Button'
+import { CardComponent } from '../../components/CardComponent'
 import { FooterCarouselComponent } from '../../components/FooterCarouselComponent'
 import { ContainerComponent } from '../../components/funcionais/ContainerComponent'
 import { Row } from '../../components/funcionais/RowComponent'
@@ -24,6 +25,11 @@ export const HomeScreen = () => {
                     </Space>
                 </Space>
             </HeaderComponent>
+            <Space>
+                <CardComponent>
+                    <Title>ola mundo</Title>
+                </CardComponent>
+            </Space>
             <Space top={2}>
                 <Title>Ultima Conta</Title>
                 <Text top={1}>Lorem ipsum dolor sit - amet.</Text>
