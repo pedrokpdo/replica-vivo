@@ -37,12 +37,7 @@ export const AppStack = () => {
                 name="BottomStack"
                 component={BottomStack}
                 options={{
-                    title: 'Home',
-                    headerTitleStyle: { color: 'white' },
-                    headerStyle: { backgroundColor: 'purple' },
-                    headerLeft: () => (
-                        <Ionicons style={{ marginRight: 16 }} name="arrow-back" size={24} color={'white'} />
-                    ),
+                   headerShown: false
                 }}
             />
         </Stack.Navigator>
