@@ -49,6 +49,15 @@ export const HomeScreen = () => {
                     </CardComponent>
                 </ScrollView>
             </Space>
+            <Space>
+                <Title top={2} bottom={1} style={{ color: 'gray' }}>Meus Planos</Title>
+                <CardComponent style={{ padding: 8 }}>
+                    <View style={{ marginLeft: 8 }}>
+                        <Title bottom={2}>SmartVivo Pré</Title>
+                        <LinkComponent name='Ver meus produtos' />
+                    </View>
+                </CardComponent>
+            </Space>
             <Space top={2}>
                 <Title>Ultima Conta</Title>
                 <Text top={1}>Lorem ipsum dolor sit - amet.</Text>

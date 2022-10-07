@@ -9,7 +9,7 @@ interface Props {
 
 export const CardComponent = ({ children, onPress, style = {} }: Props) => {
     return (
-        <TouchableOpacity style={{ borderRadius: 8, borderColor: 'black', borderWidth: 1, ...style }} onPress={onPress}>
+        <TouchableOpacity style={{ borderRadius: 8, borderColor: 'black', borderWidth: .5, ...style }} onPress={onPress}>
             {children}
         </TouchableOpacity>
     )
