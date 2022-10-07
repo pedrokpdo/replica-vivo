@@ -37,7 +37,7 @@ export const AppStack = () => {
                 name="BottomStack"
                 component={BottomStack}
                 options={{
-                    title: 'Verificação',
+                    title: 'Home',
                     headerTitleStyle: { color: 'white' },
                     headerStyle: { backgroundColor: 'purple' },
                     headerLeft: () => (

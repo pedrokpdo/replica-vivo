@@ -7,7 +7,7 @@ const Bottom = createBottomTabNavigator()
 export const BottomStack = () => {
     return (
         <Bottom.Navigator>
-            <Bottom.Screen name='HomeScreen' component={HomeScreen}/>
+            <Bottom.Screen name='HomeScreen' component={HomeScreen} options={{ headerShown: false }}/>
         </Bottom.Navigator>
     )
 }
