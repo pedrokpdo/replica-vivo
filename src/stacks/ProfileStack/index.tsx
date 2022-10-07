@@ -1,14 +1,14 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
-import { ProfileScreen } from "../../screens/ProfileScreen";
+import { MyPlansScreen } from "../../screens/MyPlansScreen";
 
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
-export const ProfileStack = () => {
+export const MyPlansStack = () => {
     return (
         <Navigator>
-            <Screen name="ProfileScreen" component={ProfileScreen} options={{ headerShown: false }} />
+            <Screen name="ProfileScreen" component={MyPlansScreen} options={{ headerShown: false }} />
         </Navigator>
     )
 }

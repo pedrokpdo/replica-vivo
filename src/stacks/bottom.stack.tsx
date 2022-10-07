@@ -1,8 +1,8 @@
-import { EvilIcons, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { AntDesign, EvilIcons, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import React from 'react'
 import { HomeStack } from './home.stack'
-import { ProfileStack } from './ProfileStack'
+import { MyPlansStack } from './ProfileStack'
 
 const Bottom = createBottomTabNavigator()
 
@@ -20,11 +20,11 @@ export const BottomStack = () => {
                 }}
             />
             <Bottom.Screen
-                name='ProfileStack'
-                component={ProfileStack}
+                name='MyPlansStack'
+                component={MyPlansStack}
                 options={{
-                    tabBarIcon: ({ color }) => (<MaterialCommunityIcons name='face-man-profile' size={24} color={color} />),
-                    tabBarLabel: 'Perfil'
+                    tabBarIcon: ({ color }) => (<AntDesign name='pause' size={24} color={color} />),
+                    tabBarLabel: 'Meus planos'
                 }}
             />
         </Bottom.Navigator>
