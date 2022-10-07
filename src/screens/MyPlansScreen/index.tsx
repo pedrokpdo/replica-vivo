@@ -28,6 +28,24 @@ export const MyPlansScreen = () => {
                         </Space>
                     </Space>
                 ) : null}
+                {press === 'sald' ? (
+                    <HeaderComponent icons={false}>
+                        <Space>
+                            <Text style={{ color: 'white' }}>Válido até 31 de outubro</Text>
+                            <Title style={{ color: 'white', fontSize: 30 }}>Seu saldo de recarga é R$ 3,02</Title>
+                            <Title top={30} style={{ color: 'white', fontSize: 24 }}>Fazer Recarga</Title>
+                        </Space>
+                    </HeaderComponent>
+                ) : null}
+                {press === 'services' ? (
+                    <HeaderComponent icons={false}>
+                        <Space>
+                            <Text style={{ color: 'white' }}>Válido até 31 de outubro</Text>
+                            <Title style={{ color: 'white', fontSize: 30 }}>Seu saldo de recarga é R$ 3,02</Title>
+                            <Title top={30} style={{ color: 'white', fontSize: 24 }}>Fazer Recarga</Title>
+                        </Space>
+                    </HeaderComponent>
+                ) : null}
             </ContainerComponent>
         </>
     )
