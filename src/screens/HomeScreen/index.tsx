@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Image, ScrollView, View } from 'react-native'
 import { Button } from '../../components/Button'
 import { CardComponent } from '../../components/CardComponent'
 import { FooterCarouselComponent } from '../../components/FooterCarouselComponent'
@@ -11,6 +11,8 @@ import { Title } from '../../components/funcionais/TitleComponent'
 import { LinkComponent } from '../../components/LinkComponent'
 import { TitleComponent } from '../../components/TitleComponent'
 import { HeaderComponent } from '../HeaderComponent'
+//@ts-ignore
+import vivocontrole from '../../assets/vivocontrole.jpg'
 
 export const HomeScreen = () => {
     return (
@@ -25,10 +27,27 @@ export const HomeScreen = () => {
                     </Space>
                 </Space>
             </HeaderComponent>
-            <Space>
-                <CardComponent>
-                    <Title>ola mundo</Title>
-                </CardComponent>
+            <Space top={2}>
+                <ScrollView horizontal>
+                    <CardComponent style={{ marginRight: 24 }}>
+                        <Row style={{ justifyContent: 'space-between' }}>
+                            <View style={{ padding: 8 }}>
+                                <Title bottom={1} top={1}>Plano ativo</Title>
+                                <Text>Vivo controle - 5gb - R$ 10,00</Text>
+                            </View>
+                            <Image source={vivocontrole} style={{ width: 100, height: 100, borderRadius: 8, marginLeft: 24 }} />
+                        </Row>
+                    </CardComponent>
+                    <CardComponent style={{}}>
+                        <Row style={{ justifyContent: 'space-between' }}>
+                            <View style={{ padding: 8 }}>
+                                <Title bottom={1} top={1}>Plano ativo</Title>
+                                <Text>Vivo controle - 5gb - R$ 10,00</Text>
+                            </View>
+                            <Image source={vivocontrole} style={{ width: 100, height: 100, borderRadius: 8, }} />
+                        </Row>
+                    </CardComponent>
+                </ScrollView>
             </Space>
             <Space top={2}>
                 <Title>Ultima Conta</Title>
