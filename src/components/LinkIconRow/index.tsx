@@ -10,7 +10,7 @@ export const LinkIconRow = ({ name }) => {
                 <Title>{name}</Title>
                 <Title>{'>'}</Title>
             </Row>
-            <Divider top={4} bottom={4} />
+            <Divider top={3} bottom={3} />
         </>
     )
 }
