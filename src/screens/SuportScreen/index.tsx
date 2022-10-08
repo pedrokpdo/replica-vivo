@@ -9,6 +9,7 @@ import { LinkComponent } from "../../components/LinkComponent";
 import { HeaderComponent } from "../HeaderComponent";
 //@ts-ignore
 import cartoon from '../../assets/cartoon.png'
+import { LinkIconRow } from "../../components/LinkIconRow";
 
 export const SuportScreen = () => {
     return (
@@ -23,10 +24,16 @@ export const SuportScreen = () => {
                             <Text bottom={4}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Text>
                             <LinkComponent name="Preciso de ajuda" />
                         </View>
-                        <Image source={cartoon} style={{ width: 70, height: 150, marginBottom: -16 }}/>
+                        <Image source={cartoon} style={{ width: 70, height: 150, marginBottom: -16 }} />
                     </CardComponent>
                 </Space>
             </HeaderComponent>
+            <Space top={18}>
+                <LinkIconRow name={'Testar velocidade'} />
+                <LinkIconRow name={'Mapa de cobertura'} />
+                <LinkIconRow name={'Perguntas frequentes'} />
+                <LinkIconRow name={'Testar velocidade'} />
+            </Space>
         </ContainerComponent>
     )
 }
