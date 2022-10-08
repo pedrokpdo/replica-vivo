@@ -5,6 +5,7 @@ import { ContainerComponent } from "../../components/funcionais/ContainerCompone
 import { Space } from "../../components/funcionais/SpaceComponent";
 import { Text } from "../../components/funcionais/TextComponent";
 import { Title } from "../../components/funcionais/TitleComponent";
+import { LinkIconRow } from "../../components/LinkIconRow";
 import { MyPlansTopTabComponent } from "../../components/MyPlansTopTabComponent";
 import { HeaderComponent } from "../HeaderComponent";
 
@@ -38,13 +39,12 @@ export const MyPlansScreen = () => {
                     </HeaderComponent>
                 ) : null}
                 {press === 'services' ? (
-                    <HeaderComponent icons={false}>
-                        <Space>
-                            <Text style={{ color: 'white' }}>Válido até 31 de outubro</Text>
-                            <Title style={{ color: 'white', fontSize: 30 }}>Seu saldo de recarga é R$ 3,02</Title>
-                            <Title top={30} style={{ color: 'white', fontSize: 24 }}>Fazer Recarga</Title>
-                        </Space>
-                    </HeaderComponent>
+                    <Space top={4}>
+                        <LinkIconRow name={'Faça uma recarga'} />
+                        <LinkIconRow name={'Faça uma recarga'} />
+                        <LinkIconRow name={'Faça uma recarga'} />
+                        <LinkIconRow name={'Faça uma recarga'} />
+                    </Space>
                 ) : null}
             </ContainerComponent>
         </>
