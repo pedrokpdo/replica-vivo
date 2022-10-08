@@ -1,5 +1,6 @@
 import { Feather, Ionicons } from "@expo/vector-icons";
 import React from "react";
+import { View } from "react-native";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 import { Row } from "../../components/funcionais/RowComponent";
 import { Space } from "../../components/funcionais/SpaceComponent";
@@ -12,9 +13,17 @@ export const DiscoveryScreen = () => {
         <ContainerComponent>
             <HeaderComponent>
                 <Space>
-                    <Title style={{ color: 'white', fontSize: 30 }}>Descubra</Title>
+                    <Title top={-2} bottom={2} style={{ color: 'white', fontSize: 30 }}>Descubra</Title>
                     <Row>
-                        <LinkIcon iconName='shopping-bag' name='Shopping' Icon={Feather} />
+                        <View style={{ marginRight: 16 }}>
+                            <LinkIcon iconName='shopping-bag' name='Shopping' Icon={Feather} />
+                        </View>
+                        <View style={{ marginRight: 16 }}>
+                            <LinkIcon iconName='shopping-bag' name='Shopping' Icon={Feather} />
+                        </View>
+                        <View style={{ marginRight: 16 }}>
+                            <LinkIcon iconName='shopping-bag' name='Shopping' Icon={Feather} />
+                        </View>
                     </Row>
                 </Space>
             </HeaderComponent>
