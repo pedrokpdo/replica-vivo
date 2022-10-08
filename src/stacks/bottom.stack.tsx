@@ -1,6 +1,7 @@
 import { AntDesign, EvilIcons, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import React from 'react'
+import { DiscoveryStack } from './DiscoveryStack'
 import { HomeStack } from './home.stack'
 import { MyPlansStack } from './ProfileStack'
 
@@ -25,6 +26,14 @@ export const BottomStack = () => {
                 options={{
                     tabBarIcon: ({ color }) => (<AntDesign name='pause' size={24} color={color} />),
                     tabBarLabel: 'Meus planos'
+                }}
+            />
+            <Bottom.Screen
+                name='DiscoveryStack'
+                component={DiscoveryStack}
+                options={{
+                    tabBarIcon: ({ color }) => (<AntDesign name='eye' size={24} color={color} />),
+                    tabBarLabel: 'Descubra'
                 }}
             />
         </Bottom.Navigator>
