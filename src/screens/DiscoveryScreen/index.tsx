@@ -6,6 +6,7 @@ import { Row } from "../../components/funcionais/RowComponent";
 import { Space } from "../../components/funcionais/SpaceComponent";
 import { Title } from "../../components/funcionais/TitleComponent";
 import { LinkIcon } from "../../components/LinkIcon";
+import { PromoComponent } from "../../components/PromoComponent";
 import { HeaderComponent } from "../HeaderComponent";
 
 export const DiscoveryScreen = () => {
@@ -27,6 +28,10 @@ export const DiscoveryScreen = () => {
                     </Row>
                 </Space>
             </HeaderComponent>
+            <Space>
+                <Title top={2} bottom={1} style={{ color: 'gray' }}>Pro seu pré</Title>
+                <PromoComponent />
+            </Space>
         </ContainerComponent>
     )
 }
