@@ -1,6 +1,7 @@
 import { EvilIcons, MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import { Row } from "../../components/funcionais/RowComponent";
 
 interface Props {
@@ -9,12 +10,17 @@ interface Props {
 }
 
 export const HeaderComponent = ({ children, icons = true }: Props) => {
+    const { navigate } = useNavigation<any>()
     return (
         <View style={{ backgroundColor: 'purple' }}>
             {icons === true ? (
                 <Row top={2} style={{ alignItems: 'center', justifyContent: 'space-around', width: 80, alignSelf: 'flex-end', marginRight: 8 }}>
-                    <MaterialIcons name="refresh" size={24} color='white' />
-                    <MaterialIcons name="person-add" size={24} color='white' />
+                    <TouchableOpacity>
+                        <MaterialIcons name="refresh" size={24} color='white' />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => { navigate('ProfileStack') }}>
+                        <MaterialIcons name="person-add" size={24} color='white' />
+                    </TouchableOpacity>
                 </Row>
             ) : null
             }

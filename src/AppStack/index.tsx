@@ -4,6 +4,7 @@ import React from "react";
 import { ConfirmCodeScreen } from "../screens/ConfirmCodeScreen";
 import { FirstLoginScreen } from "../screens/FirstLoginScreen";
 import { BottomStack } from "../stacks/bottom.stack";
+import { ProfileStack } from "../stacks/ProfileStack";
 
 const Stack = createNativeStackNavigator()
 export const AppStack = () => {
@@ -37,7 +38,14 @@ export const AppStack = () => {
                 name="BottomStack"
                 component={BottomStack}
                 options={{
-                   headerShown: false
+                    headerShown: false
+                }}
+            />
+            <Stack.Screen
+                name="ProfileStack"
+                component={ProfileStack}
+                options={{
+                    headerShown: false
                 }}
             />
         </Stack.Navigator>
