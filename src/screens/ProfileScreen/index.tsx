@@ -17,12 +17,14 @@ export const ProfileScreen = () => {
             <FullCard color='purple'>
                 <Row bottom={4} style={{ justifyContent: 'space-between' }}>
                     <Row style={{ alignItems: 'center' }}>
-                        <TouchableOpacity onPress={() => {navigation.goBack()}}>
+                        <TouchableOpacity onPress={() => { navigation.goBack() }}>
                             <Ionicons name='arrow-back' size={24} color='white' />
                         </TouchableOpacity>
                         <Title style={{ marginLeft: 16, color: 'white', fontSize: 28 }}>Perfil</Title>
                     </Row>
-                    <Ionicons name='notifications-outline' size={32} color='white' />
+                    <TouchableOpacity onPress={() => {navigation.navigate('NotificationsScreen')}}>
+                        <Ionicons name='notifications-outline' size={32} color='white' />
+                    </TouchableOpacity>
                 </Row>
                 <Row bottom={2} style={{ alignItems: 'center' }}>
                     <View style={{ width: 80, height: 80, backgroundColor: '#a3a3a37f', borderRadius: 40, alignItems: 'center', justifyContent: 'center' }}>
