@@ -8,6 +8,9 @@ import { OffertComponent } from "../../components/OffertComponent";
 
 //@ts-ignore
 import recharge from '../../assets/recharge.png'
+import { RechargeComponent } from "../../components/RechargeComponent";
+import { View } from "react-native";
+import { Row } from "../../components/funcionais/RowComponent";
 
 export const RechargeScreen = () => {
     return (
@@ -21,7 +24,18 @@ export const RechargeScreen = () => {
                 <OffertComponent image={recharge} />
             </Space>
             <Space>
-                <Title>Opções de recarga</Title>
+                <Title top={2} bottom={1}>Opções de recarga</Title>
+                <Row>
+                    <View style={{ width: 240, marginRight: 16 }}>
+                        <RechargeComponent value='12,00' />
+                    </View>
+                    <View style={{ width: 240, marginRight: 16 }}>
+                        <RechargeComponent value='15,00' />
+                    </View>
+                    <View style={{ width: 240 }}>
+                        <RechargeComponent value='20,00' />
+                    </View>
+                </Row>
             </Space>
         </ContainerComponent>
     )
