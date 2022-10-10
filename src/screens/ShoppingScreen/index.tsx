@@ -10,6 +10,8 @@ import { OffertComponent } from "../../components/OffertComponent";
 import promo from '../../assets/promo.jpg'
 //@ts-ignore
 import phone from '../../assets/phone.png'
+//@ts-ignore
+import clock from '../../assets/relogio.png'
 import { Dimensions } from "react-native";
 import { Row } from "../../components/funcionais/RowComponent";
 import { BallComponent } from "../../components/BallComponent";
@@ -43,14 +45,25 @@ export const ShoppingScreen = () => {
             </Space>
             <Space>
                 <Title bottom={1} top={4} style={{ color: '#5c5c5c' }}>SMARTPHONES</Title>
-                <ScrollView horizontal>
-                        <ProductComponent image={phone} />
-                        <ProductComponent image={phone} />
-                        <ProductComponent image={phone} />
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <ProductComponent image={phone} />
+                    <ProductComponent image={phone} />
+                    <ProductComponent image={phone} />
                 </ScrollView>
             </Space>
-            <Space top={3} bottom={2} style={{alignSelf: 'center'}}>
-                <BallComponent/>
+            <Space top={3} bottom={2} style={{ alignSelf: 'center' }}>
+                <BallComponent />
+            </Space>
+            <Space>
+                <Title bottom={1} top={4} style={{ color: '#5c5c5c' }}>ACESSORIOS</Title>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <ProductComponent image={clock} />
+                    <ProductComponent image={phone} />
+                    <ProductComponent image={phone} />
+                </ScrollView>
+            </Space>
+            <Space top={3} bottom={2} style={{ alignSelf: 'center' }}>
+                <BallComponent />
             </Space>
         </ContainerComponent>
     )
