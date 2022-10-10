@@ -10,6 +10,10 @@ import { OffertComponent } from "../../components/OffertComponent";
 import promocao from '../../assets/promocao.jpg'
 //@ts-ignore
 import recicle from '../../assets/recicle.jpg'
+import { LinkProfileComponent } from "../../components/LinkProfileComponent";
+import { LinkComponent } from "../../components/LinkComponent";
+import { LinkIconRow } from "../../components/LinkIconRow";
+import { View } from "react-native";
 
 
 export const MoreScreen = () => {
@@ -29,6 +33,15 @@ export const MoreScreen = () => {
                 <Title bottom={1} style={{ color: '#525252' }}>VARIEDADES</Title>
                 <OffertComponent image={promocao} />
             </Space>
+            <Space top={2}>
+                <Title bottom={1} style={{ color: '#525252' }}>FAST ACCESS</Title>
+            </Space>
+            <View style={{ backgroundColor: 'white', padding: 16 }}>
+                <LinkIconRow name="dasdsa" />
+                <LinkIconRow name="dasdsa" />
+                <LinkIconRow name="dasdsa" />
+                <LinkIconRow name="dasdsa" />
+            </View>
         </ContainerComponent>
     )
 }
