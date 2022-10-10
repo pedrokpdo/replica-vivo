@@ -1,10 +1,12 @@
-import { Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { AntDesign, Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import React from "react";
 import { View } from "react-native";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 import { FullCard } from "../../components/funcionais/FullCard";
 import { Row } from "../../components/funcionais/RowComponent";
+import { Space } from "../../components/funcionais/SpaceComponent";
 import { Title } from "../../components/funcionais/TitleComponent";
+import { LinkProfileComponent } from "../../components/LinkProfileComponent";
 
 export const ProfileScreen = () => {
     return (
@@ -30,6 +32,18 @@ export const ProfileScreen = () => {
                     </View>
                 </Row>
             </FullCard>
+            <Space top={2}>
+                <Title>Ajuda</Title>
+            </Space>
+            <View style={{ marginTop: 16 }}>
+                <LinkProfileComponent name={'Segurança e privacidade'} Icon={AntDesign} iconName='unlock' link={true} />
+            </View>
+            <View style={{ marginTop: 16 }}>
+                <LinkProfileComponent name={'Meus dados'} Icon={Ionicons} iconName='ios-person-outline' link={true} />
+            </View>
+            <View style={{ marginTop: 16 }}>
+                <LinkProfileComponent name={'Logout'} Icon={Feather} iconName='log-out' />
+            </View>
         </ContainerComponent>
     )
 }
