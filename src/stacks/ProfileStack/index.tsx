@@ -7,7 +7,7 @@ const { Screen, Navigator } = createNativeStackNavigator()
 export const ProfileStack = () => {
     return (
         <Navigator>
-            <Screen name="ProfileScreen" component={ProfileScreen} />
+            <Screen name="ProfileScreen" component={ProfileScreen} options={{ headerShown: false }} />
         </Navigator>
     )
 }

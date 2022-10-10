@@ -1,9 +1,9 @@
 import React from "react";
-import { SafeAreaView, View } from 'react-native'
+import { View } from 'react-native'
 
-export const ContainerComponent = ({children}) => {
+export const ContainerComponent = ({ children }) => {
     return (
-        <View style={{paddingTop: 30, flex: 1, backgroundColor: 'white'}}>
+        <View style={{ paddingTop: 30, flex: 1, backgroundColor: '#e4e4e4' }}>
             {children}
         </View>
     )
