@@ -30,6 +30,9 @@ export const DiscoveryScreen = () => {
                         <View style={{ marginRight: 16 }}>
                             <LinkIcon onPress={() => { navigation.navigate('LivePlansScreen') }} iconName='shopping-bag' name='Planos vivo' Icon={Feather} />
                         </View>
+                        <View style={{ marginRight: 16 }}>
+                            <LinkIcon onPress={() => { navigation.navigate('MoreScreen') }} iconName='shopping-bag' name='Mais +' Icon={Feather} />
+                        </View>
                     </ScrollView>
                 </Space>
             </HeaderComponent>
