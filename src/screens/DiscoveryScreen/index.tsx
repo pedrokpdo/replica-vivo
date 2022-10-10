@@ -1,4 +1,4 @@
-import { Feather } from "@expo/vector-icons";
+import { Feather, FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View } from "react-native";
@@ -22,7 +22,7 @@ export const DiscoveryScreen = () => {
                             <LinkIcon onPress={() => { navigation.navigate('ShoppingScreen') }} iconName='shopping-bag' name='Shopping' Icon={Feather} />
                         </View>
                         <View style={{ marginRight: 16 }}>
-                            <LinkIcon onPress={() => { navigation.navigate('RechargeScreen') }} iconName='shopping-bag' name='Shopping' Icon={Feather} />
+                            <LinkIcon onPress={() => { navigation.navigate('RechargeScreen') }} iconName='smartphone' name='Recarga' Icon={Feather} />
                         </View>
                         <View style={{ marginRight: 16 }}>
                             <LinkIcon iconName='shopping-bag' name='Shopping' Icon={Feather} />

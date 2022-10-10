@@ -32,27 +32,27 @@ export const HomeScreen = () => {
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                         <CardComponent style={{ marginRight: 24 }}>
                             <Row style={{ justifyContent: 'space-between' }}>
-                                <View style={{ padding: 8 }}>
+                                <View style={{ padding: 8, backgroundColor: 'white', paddingRight: 24  }}>
                                     <Title bottom={1} top={1}>Plano ativo</Title>
                                     <Text>Vivo controle - 5gb - R$ 10,00</Text>
                                 </View>
-                                <Image source={vivocontrole} style={{ width: 100, height: 100, borderRadius: 8, marginLeft: 24 }} />
+                                <Image source={vivocontrole} style={{ width: 100, height: 100, borderBottomRightRadius: 8, borderTopRightRadius: 8 }} />
                             </Row>
                         </CardComponent>
                         <CardComponent style={{}}>
                             <Row style={{ justifyContent: 'space-between' }}>
-                                <View style={{ padding: 8 }}>
+                                <View style={{ padding: 8, backgroundColor: 'white'  }}>
                                     <Title bottom={1} top={1}>Plano ativo</Title>
                                     <Text>Vivo controle - 5gb - R$ 10,00</Text>
                                 </View>
-                                <Image source={vivocontrole} style={{ width: 100, height: 100, borderRadius: 8, }} />
+                                <Image source={vivocontrole} style={{ width: 100, height: 100, borderBottomRightRadius: 8, borderTopRightRadius: 8 }} />
                             </Row>
                         </CardComponent>
                     </ScrollView>
                 </Space>
                 <Space>
                     <Title top={2} bottom={1} style={{ color: 'gray' }}>Meus Planos</Title>
-                    <CardComponent style={{ padding: 8 }}>
+                    <CardComponent style={{ padding: 8, backgroundColor: 'white' }}>
                         <View style={{ marginLeft: 8 }}>
                             <Title bottom={2}>SmartVivo Pré</Title>
                             <LinkComponent name='Ver meus produtos' />
