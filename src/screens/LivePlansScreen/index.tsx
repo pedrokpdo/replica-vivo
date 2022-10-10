@@ -10,14 +10,19 @@ import { OffertComponent } from "../../components/OffertComponent";
 import promocao from '../../assets/promocao.jpg'
 //@ts-ignore
 import vivofibra from '../../assets/vivofibra.jpg'
+import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 
 export const LivePlansScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <ContainerComponent>
             <FullCard style={{ backgroundColor: 'purple' }}>
                 <Row style={{ alignItems: 'center' }}>
-                    <AntDesign name='arrowleft' size={24} color='white' />
+                    <TouchableOpacity onPress={() => { navigation.goBack() }}>
+                        <AntDesign name='arrowleft' color='white' size={24} />
+                    </TouchableOpacity>
                     <Title style={{ color: 'white', fontSize: 24, marginLeft: 16 }}>Meus planos</Title>
                 </Row>
             </FullCard>

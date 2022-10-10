@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { View } from "react-native";
 import { ButtonLine } from "../../components/ButtonLine";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 import { Space } from "../../components/funcionais/SpaceComponent";

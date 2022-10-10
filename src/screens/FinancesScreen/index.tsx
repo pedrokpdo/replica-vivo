@@ -8,16 +8,18 @@ import { Title } from "../../components/funcionais/TitleComponent";
 import { OffertComponent } from "../../components/OffertComponent";
 //@ts-ignore
 import promocao from '../../assets/promocao.jpg'
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export const FinancesScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <ContainerComponent>
             <FullCard style={{ backgroundColor: 'purple' }}>
-                <Row style={{ alignItems: 'center' }}>
-                    <AntDesign name='arrowleft' size={24} color={'white'} />
-                    <Title style={{ fontSize: 24, color: 'white', marginLeft: 16 }}>Finanças</Title>
-                </Row>
+                <TouchableOpacity onPress={() => { navigation.goBack() }}>
+                    <AntDesign name='arrowleft' color='white' size={24} />
+                </TouchableOpacity>
+                <Title top={1} style={{ fontSize: 24, color: 'white' }}>Finanças</Title>
             </FullCard>
             <Space top={2} bottom={1}>
                 <Title>Produtos financiáveis</Title>

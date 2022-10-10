@@ -13,15 +13,19 @@ import recicle from '../../assets/recicle.jpg'
 import { LinkProfileComponent } from "../../components/LinkProfileComponent";
 import { LinkComponent } from "../../components/LinkComponent";
 import { LinkIconRow } from "../../components/LinkIconRow";
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 
 export const MoreScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <ContainerComponent>
             <FullCard style={{ backgroundColor: 'purple' }}>
                 <Row style={{ alignItems: 'center' }}>
-                    <AntDesign name='arrowleft' size={24} color='white' />
+                    <TouchableOpacity onPress={() => { navigation.goBack() }}>
+                        <AntDesign name='arrowleft' color='white' size={24} />
+                    </TouchableOpacity>
                     <Title style={{ color: 'white', marginLeft: 16, fontSize: 24 }}>Mais</Title>
                 </Row>
             </FullCard>

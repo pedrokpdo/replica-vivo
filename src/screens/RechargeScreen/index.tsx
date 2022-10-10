@@ -9,14 +9,18 @@ import { OffertComponent } from "../../components/OffertComponent";
 //@ts-ignore
 import recharge from '../../assets/recharge.png'
 import { RechargeComponent } from "../../components/RechargeComponent";
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import { Row } from "../../components/funcionais/RowComponent";
+import { useNavigation } from "@react-navigation/native";
 
 export const RechargeScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <ContainerComponent>
             <FullCard style={{ backgroundColor: 'purple' }}>
-                <AntDesign name='arrowleft' color='white' size={24} />
+                <TouchableOpacity onPress={() => { navigation.goBack() }}>
+                    <AntDesign name='arrowleft' color='white' size={24} />
+                </TouchableOpacity>
                 <Title top={2} style={{ color: 'white', fontSize: 24 }}>Recarga</Title>
             </FullCard>
             <Space top={1}>

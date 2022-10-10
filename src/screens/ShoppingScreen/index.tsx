@@ -1,6 +1,6 @@
 import { AntDesign, Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 import { FullCard } from "../../components/funcionais/FullCard";
 import { Space } from "../../components/funcionais/SpaceComponent";
@@ -16,14 +16,18 @@ import { Dimensions } from "react-native";
 import { Row } from "../../components/funcionais/RowComponent";
 import { BallComponent } from "../../components/BallComponent";
 import { ProductComponent } from "../../components/ProductComponent";
+import { useNavigation } from "@react-navigation/native";
 const { width } = Dimensions.get('screen')
 
 export const ShoppingScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <ContainerComponent>
             <FullCard style={{ backgroundColor: 'purple' }}>
                 <View>
-                    <AntDesign name='arrowleft' size={24} color='white' />
+                    <TouchableOpacity onPress={() => { navigation.goBack() }}>
+                        <AntDesign name='arrowleft' color='white' size={24} />
+                    </TouchableOpacity>
                     <Title top={2} style={{ color: 'white', fontSize: 24 }}>Shopping</Title>
                 </View>
             </FullCard>

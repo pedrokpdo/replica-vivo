@@ -1,4 +1,4 @@
-import { AntDesign, Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { AntDesign, Feather, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
@@ -17,7 +17,9 @@ export const ProfileScreen = () => {
             <FullCard color='purple'>
                 <Row bottom={4} style={{ justifyContent: 'space-between' }}>
                     <Row style={{ alignItems: 'center' }}>
-                        <Ionicons name='arrow-back' size={24} color='white' />
+                        <TouchableOpacity onPress={() => {navigation.goBack()}}>
+                            <Ionicons name='arrow-back' size={24} color='white' />
+                        </TouchableOpacity>
                         <Title style={{ marginLeft: 16, color: 'white', fontSize: 28 }}>Perfil</Title>
                     </Row>
                     <Ionicons name='notifications-outline' size={32} color='white' />
@@ -38,7 +40,7 @@ export const ProfileScreen = () => {
             <Space top={2}>
                 <Title>Ajuda</Title>
             </Space>
-            <TouchableOpacity onPress={() => {navigation.navigate('SecurityScreen')}} style={{ marginTop: 16 }}>
+            <TouchableOpacity onPress={() => { navigation.navigate('SecurityScreen') }} style={{ marginTop: 16 }}>
                 <LinkProfileComponent name={'Segurança e privacidade'} Icon={AntDesign} iconName='unlock' link={true} />
             </TouchableOpacity>
             <TouchableOpacity style={{ marginTop: 16 }}>
