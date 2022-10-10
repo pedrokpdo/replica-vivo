@@ -24,7 +24,7 @@ export const RechargeScreen = () => {
                 <OffertComponent image={recharge} />
             </Space>
             <Space>
-                <Title top={2} bottom={1}>Opções de recarga</Title>
+                <Title style={{ color: '#535353' }} top={3} bottom={1}>Opções de recarga</Title>
                 <Row>
                     <View style={{ width: 240, marginRight: 16 }}>
                         <RechargeComponent value='12,00' />

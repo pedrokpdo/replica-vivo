@@ -25,7 +25,7 @@ export const DiscoveryScreen = () => {
                             <LinkIcon onPress={() => { navigation.navigate('RechargeScreen') }} iconName='smartphone' name='Recarga' Icon={Feather} />
                         </View>
                         <View style={{ marginRight: 16 }}>
-                            <LinkIcon iconName='shopping-bag' name='Shopping' Icon={Feather} />
+                            <LinkIcon onPress={() => { navigation.navigate('FinancesScreen') }} iconName='shopping-bag' name='Finanças' Icon={Feather} />
                         </View>
                     </Row>
                 </Space>
