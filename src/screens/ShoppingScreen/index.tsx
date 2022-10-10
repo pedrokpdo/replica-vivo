@@ -42,8 +42,15 @@ export const ShoppingScreen = () => {
                 </View>
             </Space>
             <Space>
-                <Title top={4} style={{ color: '#5c5c5c' }}>SMARTPHONES</Title>
-                <ProductComponent image={phone} />
+                <Title bottom={1} top={4} style={{ color: '#5c5c5c' }}>SMARTPHONES</Title>
+                <ScrollView horizontal>
+                        <ProductComponent image={phone} />
+                        <ProductComponent image={phone} />
+                        <ProductComponent image={phone} />
+                </ScrollView>
+            </Space>
+            <Space top={3} bottom={2} style={{alignSelf: 'center'}}>
+                <BallComponent/>
             </Space>
         </ContainerComponent>
     )
