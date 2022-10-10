@@ -1,4 +1,4 @@
-import { AntDesign, Entypo, EvilIcons, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { AntDesign, Entypo, MaterialCommunityIcons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import React from 'react'
 import { DiscoveryStack } from './DiscoveryStack'
@@ -11,7 +11,7 @@ const Bottom = createBottomTabNavigator()
 export const BottomStack = () => {
     return (
         <Bottom.Navigator
-            screenOptions={{ headerShown: false, tabBarLabelStyle: { fontSize: 16 }, tabBarInactiveTintColor: 'gray', tabBarActiveTintColor: 'purple' }}
+            screenOptions={{ headerShown: false, tabBarLabelStyle: { fontSize: 16, paddingBottom: 4 }, tabBarInactiveTintColor: 'gray', tabBarActiveTintColor: 'purple', tabBarStyle: {height: 60, padding: 8} }}
         >
             <Bottom.Screen
                 name='HomeStack'

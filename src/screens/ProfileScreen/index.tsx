@@ -5,6 +5,7 @@ import { ContainerComponent } from "../../components/funcionais/ContainerCompone
 import { FullCard } from "../../components/funcionais/FullCard";
 import { Row } from "../../components/funcionais/RowComponent";
 import { Space } from "../../components/funcionais/SpaceComponent";
+import { Text } from "../../components/funcionais/TextComponent";
 import { Title } from "../../components/funcionais/TitleComponent";
 import { LinkProfileComponent } from "../../components/LinkProfileComponent";
 
@@ -44,6 +45,9 @@ export const ProfileScreen = () => {
             <View style={{ marginTop: 16 }}>
                 <LinkProfileComponent name={'Logout'} Icon={Feather} iconName='log-out' />
             </View>
+            <Space top={2}>
+                <Text>Lorem, ipsum dolor.</Text>
+            </Space>
         </ContainerComponent>
     )
 }
