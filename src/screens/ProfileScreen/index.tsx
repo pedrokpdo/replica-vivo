@@ -1,6 +1,7 @@
 import { AntDesign, Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 import { FullCard } from "../../components/funcionais/FullCard";
 import { Row } from "../../components/funcionais/RowComponent";
@@ -10,6 +11,7 @@ import { Title } from "../../components/funcionais/TitleComponent";
 import { LinkProfileComponent } from "../../components/LinkProfileComponent";
 
 export const ProfileScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <ContainerComponent>
             <FullCard color='purple'>
@@ -36,15 +38,15 @@ export const ProfileScreen = () => {
             <Space top={2}>
                 <Title>Ajuda</Title>
             </Space>
-            <View style={{ marginTop: 16 }}>
+            <TouchableOpacity onPress={() => {navigation.navigate('SecurityScreen')}} style={{ marginTop: 16 }}>
                 <LinkProfileComponent name={'Segurança e privacidade'} Icon={AntDesign} iconName='unlock' link={true} />
-            </View>
-            <View style={{ marginTop: 16 }}>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ marginTop: 16 }}>
                 <LinkProfileComponent name={'Meus dados'} Icon={Ionicons} iconName='ios-person-outline' link={true} />
-            </View>
-            <View style={{ marginTop: 16 }}>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ marginTop: 16 }}>
                 <LinkProfileComponent name={'Logout'} Icon={Feather} iconName='log-out' />
-            </View>
+            </TouchableOpacity>
             <Space top={2}>
                 <Text>Lorem, ipsum dolor.</Text>
             </Space>
