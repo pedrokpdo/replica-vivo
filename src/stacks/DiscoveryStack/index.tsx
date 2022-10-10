@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import { DiscoveryScreen } from "../../screens/DiscoveryScreen";
 import { FinancesScreen } from "../../screens/FinancesScreen";
+import { LivePlansScreen } from "../../screens/LivePlansScreen";
 import { RechargeScreen } from "../../screens/RechargeScreen";
 import { ShoppingScreen } from "../../screens/ShoppingScreen";
 
@@ -15,6 +16,7 @@ export const DiscoveryStack = () => {
             <Screen name="ShoppingScreen" component={ShoppingScreen} options={{ headerShown: false }} />
             <Screen name="RechargeScreen" component={RechargeScreen} options={{ headerShown: false }} />
             <Screen name="FinancesScreen" component={FinancesScreen} options={{ headerShown: false }} />
+            <Screen name="LivePlansScreen" component={LivePlansScreen} options={{ headerShown: false }} />
         </Navigator>
     )
 }

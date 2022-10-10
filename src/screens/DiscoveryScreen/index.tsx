@@ -1,7 +1,7 @@
 import { Feather, FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 import { Row } from "../../components/funcionais/RowComponent";
 import { Space } from "../../components/funcionais/SpaceComponent";
@@ -17,7 +17,7 @@ export const DiscoveryScreen = () => {
             <HeaderComponent>
                 <Space>
                     <Title top={-2} bottom={2} style={{ color: 'white', fontSize: 30 }}>Descubra</Title>
-                    <Row>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                         <View style={{ marginRight: 16 }}>
                             <LinkIcon onPress={() => { navigation.navigate('ShoppingScreen') }} iconName='shopping-bag' name='Shopping' Icon={Feather} />
                         </View>
@@ -27,7 +27,10 @@ export const DiscoveryScreen = () => {
                         <View style={{ marginRight: 16 }}>
                             <LinkIcon onPress={() => { navigation.navigate('FinancesScreen') }} iconName='shopping-bag' name='Finanças' Icon={Feather} />
                         </View>
-                    </Row>
+                        <View style={{ marginRight: 16 }}>
+                            <LinkIcon onPress={() => { navigation.navigate('LivePlansScreen') }} iconName='shopping-bag' name='Planos vivo' Icon={Feather} />
+                        </View>
+                    </ScrollView>
                 </Space>
             </HeaderComponent>
             <Space>
